@@ -1,4 +1,4 @@
-name: CI
+name: 編譯、整合、發布到 GitHub Pages
 
 on:
   push:
