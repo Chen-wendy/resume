@@ -16,11 +16,19 @@ module.exports = {
             },
             { test: /\.tsx?$/, loader: "ts-loader" },
             {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /\.(png|jpe?g|gif|svg)$/i,
                 loader: 'file-loader',
                 options: {
                     name: '[contenthash].[ext]',
                     outputPath: 'assets',
+                    esModule: false
+                }
+            },
+            {
+                test: /\.(html)$/,
+                loader: 'html-loader',
+                options: {
+                    attrs: ['use:href', 'img:src']
                 }
             }
         ]

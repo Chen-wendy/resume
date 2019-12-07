@@ -1,0 +1,59 @@
+#top {
+    $bubbleColor: whitesmoke;
+    height: 100px;
+    padding: 25px 0 25px 25px;
+    margin-bottom: 32px;
+
+    #avatar,
+    #summary {
+        vertical-align: bottom;
+    }
+    #avatar {
+        min-height: 80px;
+        max-height: 80px;
+
+        min-width: 80px;
+        max-width: 80px;
+
+        object-fit: cover;
+        border-radius: 50px;
+
+        margin-right: 24px;
+    }
+    #summary {
+        position: relative;
+
+        display: inline-block;
+        font-size: 2em;
+        padding: 16px 32px 16px 32px;
+        margin-bottom: 16px;
+        line-height: 100px - 48px;
+        border-radius: 16px;
+        color: black;
+        background-color: $bubbleColor;
+    }
+    #summary::before {
+        position: absolute;
+        content: "";
+        border-left: 10px solid transparent;
+        border-right: 10px solid $bubbleColor;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid $bubbleColor;
+        left: -20px;
+        top: 35px;
+        transform-origin: 50% 100%;
+        transform: scaleY(0.6);
+    }
+    #summary::after {
+        position: absolute;
+        content: "";
+        border-left: 10px solid transparent;
+        border-right: 10px solid $bubbleColor;
+        border-top: 10px solid $bubbleColor;
+        border-bottom: 10px solid transparent;
+        left: -20px;
+        top: 55px;
+        transform-origin: 50% 0%;
+        transform: scaleY(0.4);
+    }
+}
