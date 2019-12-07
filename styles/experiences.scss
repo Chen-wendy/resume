@@ -1,0 +1,94 @@
+#experiences {
+    padding-left: 32px;
+
+    width: calc(100% - 300px - 32px);
+    margin-left: -4px; // whitespace in between inline block elements
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 16px;
+    }
+
+    #work ul.timeline li {
+        &:hover p {
+            display: initial;
+        }
+
+        p {
+            position: absolute;
+
+            top: 16px;
+            bottom: 16px;
+            right: 16px;
+            left: 16px;
+
+            text-align: center;
+            padding: 32px 16px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+
+            display: none;
+
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+
+            line-height: 1.5;
+        }
+    }
+    .items {
+        line-height: 1.5;
+    }
+    section {
+        margin-bottom: 32px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    #contact {
+        #contact-container {
+            background-color: white;
+            border-radius: 16px;
+            font-size: 4rem;
+
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            a {
+                flex-grow: 1;
+                text-align: center;
+                padding: 24px 0;
+            }
+            a:hover {
+                background-color: rgba(0, 0, 0, 0.025);
+            }
+
+            .spacer {
+                border-right: 1px solid gray;
+                width: 0.1px;
+                flex-grow: 0;
+                flex-shrink: 0;
+            }
+        }
+
+        .facebook {
+            color: #4267b2 !important;
+            &:hover {
+                color: darken($color: #4267b2, $amount: 10%) !important;
+            }
+        }
+        .instagram {
+            color: #833ab4 !important;
+            &:hover {
+                color: darken($color: #833ab4, $amount: 10%) !important;
+            }
+        }
+        .email {
+            color: #db4437 !important;
+            &:hover {
+                color: darken($color: #db4437, $amount: 10%) !important;
+            }
+        }
+    }
+}

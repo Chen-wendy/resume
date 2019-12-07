@@ -1,0 +1,27 @@
+ul.items {
+    display: flex;
+    flex-direction: column;
+
+    li {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        height: 175px;
+
+        background-color: white;
+        border-radius: 16px;
+        margin-bottom: 16px;
+
+        overflow: hidden;
+
+        img {
+            max-height: 100%;
+        }
+
+        .content {
+            align-self: center;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+}
