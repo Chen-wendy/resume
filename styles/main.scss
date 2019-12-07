@@ -26,6 +26,8 @@ body {
 
 .container {
     margin: 0 auto;
+    padding: 16px;
+    box-sizing: border-box;
     max-width: 900px;
     min-width: 600px;
 }
@@ -35,4 +37,10 @@ body {
     display: inline-block;
     min-height: 100px;
     vertical-align: top;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background: black;
+    }
 }
