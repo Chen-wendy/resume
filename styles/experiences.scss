@@ -54,14 +54,33 @@
 
             display: flex;
             flex-direction: row;
-            overflow: hidden;
+            a:last-child {
+                border-top-right-radius: 16px;
+                border-bottom-right-radius: 16px;
+            }
+            a:first-child {
+                border-top-left-radius: 16px;
+                border-bottom-left-radius: 16px;
+            }
             a {
                 flex-grow: 1;
                 text-align: center;
                 padding: 24px 0;
+                position: relative;
             }
             a:hover {
                 background-color: rgba(0, 0, 0, 0.025);
+            }
+            a:hover::after {
+                content: attr(data-name);
+                position: absolute;
+
+                top: calc(24px * 2 + 4rem + 16px);
+                left: 0;
+                right: 0;
+                text-align: center;
+                font-size: 1.1rem;
+                font-family: sans-serif;
             }
 
             .spacer {
@@ -88,6 +107,12 @@
             color: #db4437 !important;
             &:hover {
                 color: darken($color: #db4437, $amount: 10%) !important;
+            }
+        }
+        .personal_site {
+            color: #52b97e !important;
+            &:hover {
+                color: darken($color: #52b97e, $amount: 10%) !important;
             }
         }
     }
