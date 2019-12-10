@@ -5,7 +5,7 @@ if (IntersectionObserver) {
         .querySelectorAll(".gauge:not(.animated)")
         .forEach(gaugeElement => {
           const gauge = gaugeElement as HTMLElement;
-          gauge.dataset["progress"] = gauge.dataset["progress-after"];
+          gauge.dataset.progress = gauge.dataset.progressAfter;
           gauge.classList.add("animated");
         });
 
@@ -13,7 +13,7 @@ if (IntersectionObserver) {
         .querySelectorAll(".progress-bar:not(.animated)")
         .forEach(gaugeElement => {
           const gauge = gaugeElement as HTMLElement;
-          gauge.dataset["progress"] = gauge.dataset["progress-after"];
+          gauge.dataset.progress = gauge.dataset.progressAfter;
           gauge.classList.add("animated");
         });
     }
@@ -26,6 +26,6 @@ if (IntersectionObserver) {
   // IntersectionObserver is not supported. Setting gauges to after values
   document.querySelectorAll(".gauge, .progress-bar").forEach(gaugeElement => {
     const gauge = gaugeElement as HTMLElement;
-    gauge.dataset["progress"] = gauge.dataset["progress-after"];
+    gauge.dataset.progress = gauge.dataset.progressAfter;
   });
 }
