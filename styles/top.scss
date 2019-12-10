@@ -4,9 +4,19 @@
     padding: 25px 0 25px 25px;
     margin-bottom: 32px;
 
+    display: flex;
+
+    .spacer {
+        flex-grow: 1;
+        flex-shrink: 1;
+        height: 1px;
+    }
+
     #avatar,
     #summary {
         vertical-align: bottom;
+        flex-grow: 0;
+        flex-shrink: 0;
     }
     #avatar {
         min-height: 80px;
@@ -18,7 +28,8 @@
         object-fit: cover;
         border-radius: 50px;
 
-        margin-right: 24px;
+        margin-left: 24px;
+        margin-top: 16px;
     }
     #summary {
         position: relative;
@@ -35,11 +46,11 @@
     #summary::before {
         position: absolute;
         content: "";
-        border-left: 10px solid transparent;
-        border-right: 10px solid $bubbleColor;
+        border-left: 10px solid $bubbleColor;
+        border-right: 10px solid transparent;
         border-top: 10px solid transparent;
         border-bottom: 10px solid $bubbleColor;
-        left: -20px;
+        right: -20px;
         top: 35px;
         transform-origin: 50% 100%;
         transform: scaleY(0.6);
@@ -47,11 +58,11 @@
     #summary::after {
         position: absolute;
         content: "";
-        border-left: 10px solid transparent;
-        border-right: 10px solid $bubbleColor;
+        border-left: 10px solid $bubbleColor;
+        border-right: 10px solid transparent;
         border-top: 10px solid $bubbleColor;
         border-bottom: 10px solid transparent;
-        left: -20px;
+        right: -20px;
         top: 55px;
         transform-origin: 50% 0%;
         transform: scaleY(0.4);

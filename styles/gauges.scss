@@ -14,15 +14,16 @@ $trackSize: 20px;
 
     overflow: hidden;
 
+    transition: $progressAnimationTime linear;
     transform: translate3d(0, 0, 0);
 
     @include top-semi-circle();
-    background: linear-gradient(
-        to right,
-        #c0392b 0%,
-        #f1c40f 50%,
-        #1abc9c 100%
-    );
+    // background: linear-gradient(
+    //     to right,
+    //     #c0392b 0%,
+    //     #f1c40f 50%,
+    //     #1abc9c 100%
+    // );
 
     &::before {
         content: "";
@@ -57,6 +58,14 @@ $trackSize: 20px;
         }
         &[data-progress="#{$progress}"]::before {
             transform: rotate(180deg / 100 * $progress);
+        }
+    }
+    @for $progress from 0 through 100 {
+        $bgColorBegin: #24b8d9;
+        $bgColorEnd: #14d134;
+
+        &[data-progress="#{$progress}"] {
+            background-color: mix($bgColorBegin, $bgColorEnd, $progress * 1%);
         }
     }
 }

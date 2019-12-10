@@ -8,12 +8,7 @@ $borderColor: white;
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(
-        to right,
-        #c0392b 0%,
-        #f1c40f 50%,
-        #1abc9c 100%
-    );
+    background-image: linear-gradient(to right, #24b8d9, #14d134);
 
     border-radius: 4px;
     border: 3px solid $borderColor;

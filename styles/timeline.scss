@@ -56,14 +56,15 @@ ul.timeline {
 
         span {
             position: absolute;
-            width: 80px;
-            border: 1px solid black;
+            width: 60px;
 
             top: calc(-1em + -52px);
-            left: calc(50% - 42px);
+            left: calc(50% - 32px);
 
             text-align: center;
-            background-color: white;
+            background: #1b1924;
+            color: white;
+
             border-radius: 8px;
             padding: 8px;
         }

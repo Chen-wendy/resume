@@ -10,18 +10,34 @@ ul.items {
 
         background-color: white;
         border-radius: 16px;
-        margin-bottom: 16px;
 
-        overflow: hidden;
+        &:not(:last-of-type) {
+            margin-bottom: 16px;
+        }
 
         img {
             max-height: 100%;
+            border-top-left-radius: 16px;
+            border-bottom-left-radius: 16px;
+            transition: 50ms linear;
+            will-change: transform;
+
+            &:hover {
+                transition: 250ms linear;
+                border-radius: 0;
+
+                z-index: 2;
+                transform: scale(2, 2);
+            }
         }
 
         .content {
             align-self: center;
             padding-left: 16px;
             padding-right: 16px;
+
+            overflow-y: scroll;
+            max-height: 100%;
         }
     }
 }

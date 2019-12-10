@@ -14,7 +14,7 @@
             display: initial;
         }
 
-        p {
+        .description {
             position: absolute;
 
             top: 16px;
@@ -23,7 +23,9 @@
             left: 16px;
 
             text-align: center;
-            padding: 32px 16px;
+            padding: 24px 12px;
+            font-size: 0.8rem;
+
             background: rgba(0, 0, 0, 0.5);
             color: white;
 
